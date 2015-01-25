@@ -16,7 +16,6 @@ makeCacheMatrix <- function(x = matrix())  {
 get<-function() x
 read_matrix<-function() m
 inverse<-function(solve) m<<- solve
-list(set=set, get=get, inverse=inverse, read_matrix=read_matrix)
 return(inverse)
 }
 
@@ -29,7 +28,7 @@ cacheSolve <- function(x, ...) {
   
   #if matrix inversion already exists, it is returned
   if(!is.null(matrixinverse)) {                 
-    message("getting cached data - Inverse of the matrix")
+    message("cached data exists..")
     return(matrixinverse)
   }
   #if the inverse is not found it will be calculated
